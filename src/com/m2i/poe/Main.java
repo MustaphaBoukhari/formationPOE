@@ -4,14 +4,16 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        int[] tab = {2, -2, 99, 88, 7, 13, 12, 10, 18, 22};
+        int[] tab = {2, -3, 4, 5, 6, 7, 8, 9};
         System.out.println(isPrime(7));
         System.out.println(isPrime(6));
         System.out.println(isPrime(1001));
-        int[] result = getPrimeNumbers(tab);
+      /*  int[] result = getPrimeNumbers(tab);
         for (int i : result) {
             System.out.print(i + " ");
-        }
+        }*/
+        int n = tab.length;
+        System.out.println(multipli(tab, n));
     }
 
     public static boolean isPrime(int n) {
@@ -39,5 +41,14 @@ public class Main {
             }
         }
         return result;
+    }
+
+    public static int multipli(int[] tab, int n) {
+        if (n == 1) {
+            return tab[0];
+        } else {
+            return tab[n - 1] * multipli(tab, n - 1);
+        }
+
     }
 }
