@@ -51,4 +51,10 @@ public class Main {
         }
 
     }
+   /* public static String outchain(String inchain ){
+        for (int i=1;i<inchain.length();i++){
+            String q=inchain.substring(0,i);
+            String p=inchain.substring()
+        }*/
+
 }
