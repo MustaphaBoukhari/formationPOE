@@ -1,6 +1,7 @@
-package com.m2i.poo.tpmedia;
+package com.m2i.poo.tpmedia.tpmediaCorrec;
 
 public class Publisher {
+
     private int id;
     private String name;
 
@@ -8,7 +9,6 @@ public class Publisher {
         this.id = id;
         this.name = name;
     }
-
 
     public Publisher() {
     }
@@ -28,6 +28,5 @@ public class Publisher {
     public void setName(String name) {
         this.name = name;
     }
-
-
 }
+

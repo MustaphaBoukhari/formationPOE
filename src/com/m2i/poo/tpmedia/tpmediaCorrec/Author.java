@@ -1,10 +1,13 @@
-package com.m2i.poo.tpmedia;
+package com.m2i.poo.tpmedia.tpmediaCorrec;
 
 public class Author {
+
+    private int id;
     private String firstName;
     private String lastName;
 
-    public Author(String firstName, String lastName) {
+    public Author(int id, String firstName, String lastName) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -12,6 +15,14 @@ public class Author {
     public Author() {
     }
 
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -29,3 +40,4 @@ public class Author {
         this.lastName = lastName;
     }
 }
+

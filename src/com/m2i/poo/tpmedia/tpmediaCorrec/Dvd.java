@@ -1,6 +1,7 @@
-package com.m2i.poo.tpmedia;
+package com.m2i.poo.tpmedia.tpmediaCorrec;
 
 public class Dvd extends Media {
+
     private int zone;
 
     public int getZone() {
@@ -11,12 +12,16 @@ public class Dvd extends Media {
         this.zone = zone;
     }
 
+    public Dvd() {
+    }
+
     public Dvd(int id, String title, double price) {
         super(id, title, price);
     }
 
     @Override
     public double getNetPrice() {
-        return getPrice() * 0.8;
+        return getPrice() * 1.2 * 0.8;
     }
 }
+

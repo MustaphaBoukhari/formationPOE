@@ -41,9 +41,9 @@ public class Base {
 
     }
 
-    public Base getApparie(boolean isArn) {
+    public Base getApparie(boolean isRNA) {
         if (symbol.equals("A")) {
-            if (isArn) {
+            if (isRNA) {
                 return new Base("U");
             } else {
                 return new Base("T");

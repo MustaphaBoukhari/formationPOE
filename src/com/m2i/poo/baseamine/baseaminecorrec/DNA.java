@@ -1,45 +1,38 @@
 package com.m2i.poo.baseamine.baseaminecorrec;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
-public class DNA {
-
-    private ArrayList<Base> strand = new ArrayList<>();
+public class DNA extends Nucleotid {
 
     public DNA() {
     }
 
-    public DNA(String code) {
-        for (char c : code.toCharArray()) {
-            Base b = new Base(String.valueOf(c));
-            if (c == 'U') {
-                System.out.println("U is forbidden in DNA");
-            }
-            strand.add(b);
+
+    public DNA(String code) throws IOException {
+        super(code);
+        if (code.contains("U")) {
+            throw new IOException("U forbidden");
         }
     }
 
     public String toString() {
-        String res = "";
-        for (Base b : strand) {
-            res += b.getSymbol();
-        }
-        return res;
+        return "DNA :" + super.toString();
     }
 
     public ArrayList<Base> getComplementary() {
         ArrayList<Base> res = new ArrayList<>();
-        for (Base b : strand) {
+        for (Base b : getStrand()) {
             res.add(b.getApparie(false));
         }
         return res;
     }
 
     public RNA transcription() {
-        RNA arn = new RNA();
-        for (Base b : strand) {
-            arn.getStrand().add(b.getApparie(true));
+        RNA rna = new RNA();
+        for (Base b : getStrand()) {
+            rna.getStrand().add(b.getApparie(true));
         }
-        return arn;
+        return rna;
     }
 }

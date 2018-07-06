@@ -1,6 +1,7 @@
-package com.m2i.poo.tpmedia;
+package com.m2i.poo.tpmedia.tpmediaCorrec;
 
-public class Book extends Media {
+public class Cd extends Media {
+
     private int nbPage;
 
     public int getNbPage() {
@@ -11,16 +12,16 @@ public class Book extends Media {
         this.nbPage = nbPage;
     }
 
-    public Book(int id, String title, double price) {
-        super(id, title, price);
+    public Cd() {
     }
 
-    public Book() {
+    public Cd(int id, String title, double price) {
+        super(id, title, price);
     }
 
     @Override
     public double getNetPrice() {
-        return getPrice() * 1.05;
+        return getPrice() * 1.2;
     }
-
 }
+
