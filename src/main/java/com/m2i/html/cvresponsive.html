@@ -2,9 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Mustapha BOUKHARI</title>
+    <link rel="stylesheet" href="www/css/bootstrap.css">
+    <link rel="stylesheet" href="www/css/app.css">
 </head>
 <body>
-$END$
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header inline-block">
+            <a href="#/phones" class="navbar-brand">
+                <div class="hidden-xs"><img src="https://www.python.org/static/community_logos/python-logo-generic.svg"
+                                            width="100"/> Mustapha BOUKHARI Python developper
+                </div>
+                <div class="hidden-sm hidden-md hidden-lg">Mustapha BOUKHARI</div>
+            </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="http://www.google.com">CVC</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<br/><br/>
+<div class="view-container">
+    <div class="view-frame">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-10">
+                    <ul class="phones">
+                        <li ng-repeat="phone in c.phones | filter:c.query | orderBy:c.orderProp"
+                            class="thumbnail phone-listing ng-scope">
+                            <a href="phone.html" class="thumb"><img ng-src="images/merging.png"
+                                                                    src="images/merging.png"></a>
+                            <p><a href="#/phone/motorola-xoom-with-wi-fi" class="ng-binding">MERGING PROJECT 2013-2016</a></p>
+                            <p class="ng-binding">
+
+                                We developed a thermoelectric generator (TEG) module to convert waste heat to electricity,
+                                offsetting the power requirements of increasingly power-hungry microelectronics while minimising heat build-up.
+                                The TEG includes a tailor-made power circuit to boost low voltage generation that was successfully tested in the lab.</p>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10">
+                    <ul class="phones">
+                        <li ng-repeat="phone in c.phones | filter:c.query | orderBy:c.orderProp"
+                            class="thumbnail phone-listing ng-scope">
+                            <a href="phone.html" class="thumb"><img ng-src="images/Sonatrach.svg"
+                                                                    src="images/Sonatrach.svg"></a>
+                            <p><a href="#/phone/motorola-xoom-with-wi-fi" class="ng-binding">Algerian Welding Bureau 2010-2012</a></p>
+                            <p class="ng-binding"></p>
+                                Project coordinator in Algerian welding company, in national project for Sonatrach
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10">
+                    <ul class="phones">
+                        <li ng-repeat="phone in c.phones | filter:c.query | orderBy:c.orderProp"
+                            class="thumbnail phone-listing ng-scope">
+                            <a href="phone.html" class="thumb"><img ng-src="images/Java.jpg"
+                                                                    src="images/Java.jpg"></a>
+                            <p><a href="#/phone/motorola-xoom-with-wi-fi" class="ng-binding">Formation JAVA Developper</a></p>
+                            <p class="ng-binding">.</p>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
 </body>
 </html>
