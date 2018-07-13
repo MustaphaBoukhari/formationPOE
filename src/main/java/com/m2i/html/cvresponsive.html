@@ -5,6 +5,20 @@
     <title>Mustapha BOUKHARI</title>
     <link rel="stylesheet" href="www/css/bootstrap.css">
     <link rel="stylesheet" href="www/css/app.css">
+    <script language="JavaScript">
+    var bool=true;
+    function color(){
+        if (bool){
+            document.bgColor='red';
+            alert('is Red');
+            bool=false;
+        } else {
+            document.bgColor='blue';
+            alert('is not Red');
+            bool=true;
+        }
+    }
+    </script>
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -87,6 +101,7 @@
 
 
     </div>
+        <input type="button" value="don't fucking click" onclick="color()">
 </div>
 
 </body>

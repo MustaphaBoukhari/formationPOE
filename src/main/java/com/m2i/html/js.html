@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <script lang="JavaScript" src="js/myLibrary.js"/></script>
+    <script language="JavaScript">
+        var red = true;
+        function hello() {
+            if(red) {
+                document.bgColor='blue';
+                red=false;
+            }
+            else {
+                document.bgColor='red';
+                red=true;
+            }
+        }
+
+        function checkTitle() {
+            var title = document.forms["myForm"].elements["titleBox"].value;
+            var element= document.getElementById("div1");
+            if(title.length == 0) {
+                element.style.visibility="visible";
+                element.style.color="red";
+                element.style.font="italic small-caps bold 12px arial,sans-serif" ;
+
+            } else {
+                element.style.visibility="hidden";
+            }
+        }
+        function checkPrice() {
+            var price = document.forms["myForm"].elements["priceBox"].value;
+            var element= document.getElementById("div2");
+            if(price.length == 0) {
+                element.textContent="That's not a knife!"
+                element.style.visibility="visible";
+                element.style.color="red";
+                element.style.font="italic small-caps bold 12px arial,sans-serif" ;
+                
+            } else if(price<0) {
+                element.textContent="Are you kidding me?"
+                element.style.visibility="visible";
+                element.style.color="purple";
+                element.style.font="italic caps bold 100px arial,sans-serif" ;
+                }  else {
+                element.style.visibility="hidden";                
+            }
+        }
+    </script>
+        
+    <script language="JavaScript">
+        function mg() {
+            var title=document.forms["myForm"].elements["titleBox"].value;
+            var price=document.forms["myForm"].elements["priceBox"].value;
+            alert(title+" "+price);
+        }
+    </script>
+
+
+</head>
+<body>
+    Hello Javascript!<br/>
+    <input type="button" value="OK" onclick="hello()">
+    <script lang="Javascript">
+        document.write(circleArea(2)+'<br/>');
+        document.write(navigator.appCodeName+'<br/>');
+        var tab = new Array(1,2,3,4,5,6,7,8,9,10);
+        display(tab)
+        document.write('<br/>');
+        document.write(sum(tab)+'<br/>');
+        document.write(max(tab)+'<br/>');
+        document.write(avg(tab)+'<br/>');
+        document.write(isPrimeNumber(1043)+'<br/>');
+        display(getPrimeNumbers(tab));
+        <br/>
+        <br/>
+        <br/>        
+    </script>
+    <form name="myForm">
+        Title : <input type="text" name="titleBox" onblur="checkTitle()"/> 
+        <div id="div1" style="visibility: hidden; display:inline;">
+            Put your faith in your hand son!
+        </div> <br/>
+        Price : <input type="number" name="priceBox" onblur="checkPrice()"/>
+        <div id="div2" style="visibility: hidden; display:inline;"></div> <br/>
+        <input type="button" value="Fuck That" name="okButton" onclick="mg()"/>
+    </form>
+        
+        
+        
+        
+    </body>
+    </html>
